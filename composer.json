@@ -1,0 +1,23 @@
+{
+    "name": "cakephp-brasil/twitter-bootstrap",
+    "description": "TwitterBootstrap plugin for CakePHP 3",
+    "type": "cakephp-plugin",
+    "require": {
+        "php": ">=5.4.16",
+        "cakephp/cakephp": "~3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "TwitterBootstrap\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TwitterBootstrap\\Test\\": "tests",
+            "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
+        }
+    }
+}
