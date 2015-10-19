@@ -1,5 +1,5 @@
 <?php
-$class = 'alert alert';
+$class = 'alert alert-';
 if (!empty($params['class'])) {
 	if ($params['class'] == 'error') {
     	$class .= '-danger';
@@ -10,8 +10,10 @@ if (!empty($params['class'])) {
 		or $params['class'] == 'warning') {
 		$class .= '-info'.$params['class'];
 	} else {
-		$class .= '-info';
+		$class .= 'info';
 	}
+} else {
+	$class .= 'info';
 }
 ?>
 <div class="<?= h($class) ?>" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><?= h($message) ?></div>
