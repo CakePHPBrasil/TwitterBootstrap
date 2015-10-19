@@ -8,6 +8,12 @@ Você pode instalar usando [composer](http://getcomposer.org) através do comand
 
 ## Como usar
 
+### Para criar views com **bake**
+
+Apenas adicione `--theme TwitterBootstrap` no final do comando, por exemplo:
+
+	bin\cake bake all MyModel --theme TwitterBootstrap
+
 ### Para ativar o formulário
 
 Em **src/View/AppView.php** adicionar `$this->loadHelper('Form', ['className' => 'TwitterBootstrap.Form']);` dentro de `initialize()`, desta forma:
@@ -23,15 +29,15 @@ Informe `$this->viewBuilder()->theme('TwitterBootstrap');` no seu controller (po
 
 Em **src/View/AppView.php** adicionar `$this->loadHelper('Form', ['className' => 'TwitterBootstrap.Form']);` dentro de `initialize()`, desta forma:
 
-### Para alterar o título
+#### Para alterar o título
 
 No AppController apenas informe com `$this->set('project_name', 'Título que você quer')`.
 
-### Para alterar o menu superior direito
+#### Para alterar o menu superior direito
 
 Crie um arquivo chamado **nav-bar-right.ctp** dentro de **src/Template/Element** (você pode copiar o modelo dentro de **vendor/cakephp-brasil/twitter-bootstrap/src/Template/Element**)
 
-### Para alterar o menu superior esquerdo
+#### Para alterar o menu superior esquerdo
 
 Crie um arquivo chamado **nav-bar-left.ctp** dentro de **src/Template/Element** (você pode copiar o modelo dentro de **vendor/cakephp-brasil/twitter-bootstrap/src/Template/Element**)
 
