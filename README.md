@@ -6,6 +6,10 @@ Você pode instalar usando [composer](http://getcomposer.org) através do comand
 
 	composer require cakephp-brasil/twitter-bootstrap
 
+Certifique-se de carregar o plugin em **config/bootstrap.php**.
+
+	Plugin::load('TwitterBootstrap');
+
 ## Como usar
 
 ### Para criar views com **bake**
