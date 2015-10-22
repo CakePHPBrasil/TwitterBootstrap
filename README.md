@@ -41,9 +41,30 @@ No AppController apenas informe com `$this->set('project_name', 'Título que voc
 
 Crie um arquivo chamado **nav-bar-right.ctp** dentro de **src/Template/Element** (você pode copiar o modelo dentro de **vendor/cakephp-brasil/twitter-bootstrap/src/Template/Element**)
 
+Ou veja a **Publicando as views necessárias automáticamente**
+
 #### Para alterar o menu superior esquerdo
 
 Crie um arquivo chamado **nav-bar-left.ctp** dentro de **src/Template/Element** (você pode copiar o modelo dentro de **vendor/cakephp-brasil/twitter-bootstrap/src/Template/Element**)
+
+Ou veja a **Publicando as views necessárias automáticamente**
+
+#### Publicando as views necessárias automáticamente
+
+Contribuição do [@josimar-lemos](https://github.com/josimar-lemos)
+
+Tava achando muito trabalhoso (programador preguiçoso on) ter que copiar e colar os Elements do Tema toda vez que precisava mexer neles..
+
+Criei um Shell para facilitar o processo, coloquei só uma opção para copiar todos os Elements de uma vez, mas posso incrementar isso aí se quiserem.
+
+Para testar:
+
+	$ cd path-to-project
+	$ bin/cake TwitterBootstrap.publish
+Ou:
+
+	$ cd path-to-project
+	$ bin/cake TwitterBootstrap.publish all
 
 ## Para contribuir
 
