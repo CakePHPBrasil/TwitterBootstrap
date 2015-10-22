@@ -188,6 +188,9 @@ class FormHelper extends CakeFormHelper {
         if (!isset($options['type'])) {
             $options['type'] = $method;
         }
+        if (isset($options['class']) and is_array($options['class'])) {
+            $options['class'] = implode(' ', $options['class']);
+        }
         $options = $this->_initInputField($params[0], $options);
 
         $options = $this->_injectStyles($options, 'form-control');
