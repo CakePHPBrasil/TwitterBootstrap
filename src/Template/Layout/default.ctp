@@ -33,7 +33,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="#"><?php
+	      <a class="navbar-brand" href="<?php echo $this->Url->build(isset($project_url)?$project_url:'/');?>"><?php
 	      	if (isset($project_name)) {
 	      		echo $project_name;
 	      	}
@@ -70,6 +70,7 @@
 	  </div><!-- /.container-fluid -->
 	</nav>
 	<section class="container clearfix">
+        <?= $this->Flash->render() ?>
         <?= $this->fetch('content') ?>
     </section>
 
