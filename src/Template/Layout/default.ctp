@@ -45,7 +45,7 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <?php
-	      	$default_nav_bar_left = APP_DIR.DS.'Template'.DS.'Element'.DS.'nav-bar-left.ctp';
+	      	$default_nav_bar_left = ROOT.DS.'src'.DS.'Template'.DS.'Element'.DS.'nav-bar-left.ctp';
 	      	if (file_exists($default_nav_bar_left)) {
 	      		ob_start();
 	      		include $default_nav_bar_left;
@@ -56,7 +56,7 @@
 	      	}
       	  ?>
 	      <?php
-	      	$default_nav_bar_right = APP_DIR.DS.'Template'.DS.'Element'.DS.'nav-bar-right.ctp';
+	      	$default_nav_bar_right = ROOT.DS.'src'.DS.'Template'.DS.'Element'.DS.'nav-bar-right.ctp';
 	      	if (file_exists($default_nav_bar_right)) {
 	      		ob_start();
 	      		include $default_nav_bar_right;
