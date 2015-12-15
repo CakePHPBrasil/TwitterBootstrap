@@ -73,6 +73,18 @@
         <?= $this->fetch('content') ?>
     </section>
 
+    <?php
+	  	$default_footer = ROOT.DS.'src'.DS.'Template'.DS.'Element'.DS.'footer.ctp';
+	  	if (file_exists($default_nav_bar_left)) {
+	  		ob_start();
+	  		include $default_footer;
+	  		echo ob_get_clean();
+	  	}
+	  	else {
+	  		echo $this->element('footer');
+	  	}
+	?>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
