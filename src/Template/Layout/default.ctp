@@ -75,7 +75,7 @@
 
     <?php
 	  	$default_footer = ROOT.DS.'src'.DS.'Template'.DS.'Element'.DS.'footer.ctp';
-	  	if (file_exists($default_nav_bar_left)) {
+	  	if (file_exists($default_footer)) {
 	  		ob_start();
 	  		include $default_footer;
 	  		echo ob_get_clean();
