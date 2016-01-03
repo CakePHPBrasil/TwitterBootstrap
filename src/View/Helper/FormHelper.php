@@ -156,20 +156,19 @@ class FormHelper extends CakeFormHelper {
     protected function _datetimeOptions($options)
     {
 
-        $hasYear = is_array($options['year']);
-        if ($hasYear) {
+        if (isset($options['year']) and is_array($options['year'])) {
             $options['year'] = $this->_injectStyles($options['year'], 'form-control');
         }
 
-        if (is_array($options['month'])) {
+        if (isset($options['month']) and is_array($options['month'])) {
             $options['month'] = $this->_injectStyles($options['month'], 'form-control');
         }
 
-        if (is_array($options['hour'])) {
+        if (isset($options['hour']) and is_array($options['hour'])) {
             $options['hour'] = $this->_injectStyles($options['hour'], 'form-control');
         }
 
-        if (is_array($options['minute'])) {
+        if (isset($options['minute']) and is_array($options['minute'])) {
             $options['minute'] = $this->_injectStyles($options['minute'], 'form-control');
         }
 
