@@ -57,8 +57,10 @@ class FormHelper extends CakeFormHelper {
         ];
         $options = $this->_parseOptions($fieldName, $options);
         $options += ['id' => $this->_domId($fieldName)];
+        $finalClasses = 'form-control';
         switch ($options['type']) {
             case 'checkbox':
+                $finalClasses = '';
                 $options['templates']['checkboxWrapper'] = '<div class="checkbox"><label>{{input}}{{label}}</label></div>';
                 $options['templates']['label'] = '{{text}}';
                 break;
@@ -68,7 +70,7 @@ class FormHelper extends CakeFormHelper {
                 break;
             default:
         }
-        return parent::input($fieldName, $this->_injectStyles($options, 'form-control'));
+        return parent::input($fieldName, $this->_injectStyles($options, $finalClasses));
     }
 
     public function select($fieldName, $options = [], array $attributes = [])
