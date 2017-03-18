@@ -41,7 +41,7 @@ $fields = collection($fields)
 %>
     </ul>
 </nav>
-<div class="<%= $pluralVar %> index col-md-10 columns content">
+<div class="<%= $pluralVar %> col-md-10">
     <h3><%= $pluralHumanName %></h3>
     <table class="table table-striped table-hover">
         <thead>
@@ -92,16 +92,14 @@ $fields = collection($fields)
             <?php endforeach; ?>
         </tbody>
     </table>
-    <div class="paginator">
-        <center>
-            <ul class="pagination">
-                <?= $this->Paginator->prev('&laquo; ' . __('previous'), ['escape'=>false]) ?>
-                <?= $this->Paginator->numbers(['escape'=>false]) ?>
-                <?= $this->Paginator->next(__('next') . ' &raquo;', ['escape'=>false]) ?>
-            </ul>
-            <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} records out of
-         {{count}} total, starting on record {{start}}, ending on {{end}}')) ?></p>
-        </div>
-    </center>
+    <div class="paginator text-center">
+        <ul class="pagination">
+            <?= $this->Paginator->prev('&laquo; ' . __('previous'), ['escape'=>false]) ?>
+            <?= $this->Paginator->numbers(['escape'=>false]) ?>
+            <?= $this->Paginator->next(__('next') . ' &raquo;', ['escape'=>false]) ?>
+        </ul>
+        <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} records out of
+        {{count}} total, starting on record {{start}}, ending on {{end}}')) ?></p>
+    </div>
 </div>
 </div>

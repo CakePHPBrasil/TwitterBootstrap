@@ -74,7 +74,7 @@ $pk = "\$$singularVar->{$primaryKey[0]}";
 %>
     </ul>
 </nav>
-<div class="<%= $pluralVar %> view col-lg-10 col-md-9">
+<div class="<%= $pluralVar %> col-lg-10 col-md-9">
     <h3><?= h($<%= $singularVar %>-><%= $displayField %>) ?></h3>
     <table class="table table-striped table-hover">
 <% if ($groupedFields['string']) : %>
@@ -134,8 +134,8 @@ foreach ($relations as $alias => $details):
     $otherPluralHumanName = Inflector::humanize(Inflector::underscore($details['controller']));
     %>
     <div class="related">
-        <h4><?= __('Related {0}', ['<%= $otherPluralHumanName %>']) ?></h4>
         <?php if (!empty($<%= $singularVar %>-><%= $details['property'] %>)): ?>
+        <h4><?= __('Related {0}', ['<%= $otherPluralHumanName %>']) ?></h4>
         <table class="table table-striped table-hover">
             <tr>
 <% foreach ($details['fields'] as $field): %>
@@ -157,7 +157,7 @@ foreach ($relations as $alias => $details):
             </tr>
             <?php endforeach; ?>
         </table>
-    <?php endif; ?>
+        <?php endif; ?>
     </div>
 <% endforeach; %>
 </div>
