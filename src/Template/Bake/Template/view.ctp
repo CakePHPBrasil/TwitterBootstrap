@@ -106,7 +106,7 @@ $pk = "\$$singularVar->{$primaryKey[0]}";
             <% if ($groupedFields['number']) : %>
             <% foreach ($groupedFields['number'] as $field) : %>
                     <tr>
-                        <th>'<%= Inflector::humanize($field) %></th>
+                        <th><%= Inflector::humanize($field) %></th>
                         <td><?= $this->Number->format($<%= $singularVar %>-><%= $field %>) ?></td>
                     </tr>
             <% endforeach; %>
